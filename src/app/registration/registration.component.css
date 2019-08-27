@@ -1,0 +1,13 @@
+.registration{
+  width: 200px;
+  /*min-width: 420px;*/
+  /*min-height: 556px;*/
+  display: flex;
+  flex-direction: column;
+
+  /*background-color: #4c2e88;*/
+}
+
+.get{
+  cursor: pointer;
+}
