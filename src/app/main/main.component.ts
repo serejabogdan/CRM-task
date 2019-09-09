@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AppClientService} from '../shared/app-client.service';
 
 @Component({
   selector: 'app-main',
@@ -7,13 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  array = [
-    {name: 'lsiejg@gmail.com', count: 123},
-    {name: 'fire@ukr.net', count: 23},
-    {name: 'alle.privet@alert.net', count: 1}
-  ];
-
-  constructor() { }
+  constructor(private service: AppClientService) { }
 
   ngOnInit() {
   }

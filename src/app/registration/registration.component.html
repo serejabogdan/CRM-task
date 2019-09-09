@@ -1,11 +1,26 @@
 <h1>Registration</h1>
-<div class="registration">
-  <span>Email:</span>
-  <input type="text">
-  <span>Username:</span>
-  <input type="text">
-  <span>Password:</span>
-  <input type="text">
+<form [formGroup]="form">
+  <div class="registration">
+    <div class="form-group"
 
-  <button class="get">Submit</button>
-</div>
+    >
+      <span>Email:</span>
+      <input type="text" id="email" formControlName="email" [ngModel]="email">
+    </div>
+    <div class="form-group"
+
+    >
+      <span>Username:</span>
+      <input type="text" id="name" formControlName="name">
+    </div>
+    <div class="form-group"
+
+    >
+      <span>Password:</span>
+      <input type="text" id="password" formControlName="password">
+    </div>
+
+    <button class="get" routerLink="/registration" (click)="hey(email)">Sign up</button>
+    <button class="get" routerLink="/login">Sign in</button>
+  </div>
+</form>
