@@ -12,13 +12,12 @@
   align-items: center;
 }
 
-.content{
-  width: 90%;
-}
-
 .buttons{
-  width: 70%;
   display: flex;
-
   justify-content: space-between;
 }
+
+mat-label{
+  color: #fff;
+}
+

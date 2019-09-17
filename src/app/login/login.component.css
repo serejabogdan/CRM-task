@@ -12,10 +12,7 @@
   align-items: center;
 }
 
-.content{
-  width: 30%;
+.buttons{
+  display: flex;
+  justify-content: space-between;
 }
-
-/*.button2{
-  margin-left: 20px;
-}*/
