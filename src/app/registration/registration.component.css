@@ -1,13 +1,24 @@
-.registration{
-  width: 200px;
-  /*min-width: 420px;*/
-  /*min-height: 556px;*/
-  display: flex;
-  flex-direction: column;
-
-  /*background-color: #4c2e88;*/
+::ng-deep app-registration{
+  width: 100%;
 }
 
-.get{
-  cursor: pointer;
+.component{
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  width: 90%;
+}
+
+.buttons{
+  width: 70%;
+  display: flex;
+
+  justify-content: space-between;
 }

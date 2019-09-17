@@ -10,11 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientComponent } from './client/client.component';
-import {AngularFireModule} from '@angular/fire';
-import {environment} from '../environments/environment';
-import {AngularFireStorageModule} from '@angular/fire/storage';
-import {AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+// import {AngularFireStorageModule} from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NavComponent } from './nav/nav.component';
+import { MatButtonModule, MatInputModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,12 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     RegistrationComponent,
     LoginComponent,
     MainComponent,
-    ClientComponent
+    ClientComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
@@ -34,7 +39,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     AngularFireModule.initializeApp(environment.firebaseConfig, 'ang-name'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,18 @@
-<p>main works!</p>
+<div class="component">
+  <div class="content">
+    <h1>Clients</h1>
 
-<div class="clients-list">
-  <ul>
-    <li *ngFor="let client of service.clients" [routerLink]="['/main', client.id]">
-      Имя клиента: {{client.name}}, сумма покупок: {{client.count}}
-    </li>
-  </ul>
+    <div class="clients-list" *ngIf="clients; else loading">
+      <ul>
+        <li *ngFor="let client of clients" [routerLink]="['/main', client.id]">
+          <h2 class="client-name">Name: {{client.name}}</h2>
+          <h4 class="client-email">E-mail: {{client.email}}</h4>
+          <h4 class="client-id">Id: {{client.id}}</h4>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
+<ng-template #loading>
+  <span>Loading...</span>
+</ng-template>

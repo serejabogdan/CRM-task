@@ -1,12 +1,21 @@
-.login {
+::ng-deep app-login{
+  width: 100%;
+}
+
+.component{
+  width: 100%;
   display: flex;
+
   flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
 }
 
-.get{
-  cursor: pointer;
+.content{
+  width: 30%;
 }
 
-.registration{
-  cursor: pointer;
-}
+/*.button2{
+  margin-left: 20px;
+}*/

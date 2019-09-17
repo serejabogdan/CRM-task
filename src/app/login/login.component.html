@@ -1,11 +1,33 @@
-<h1>Login</h1>
+<div class="component">
+  <div class="content">
+    <h1>Login</h1>
 
-<div class="login">
-  <span>Username:</span>
-  <input type="text">
-  <span>Password:</span>
-  <input type="text">
+    <div class="successful" style="color: green" *ngIf="loggedIn">
+      {{message}}
+    </div>
+    <div class="message" style="color: red" *ngIf="!loggedIn">
+      {{message}}
+    </div>
 
-  <button class="get" >Sign in</button><!--routerLink="/main"-->
-  <button class="registration" routerLink="/registration">Sign up</button>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="login">
+        <div>
+          <mat-form-field>
+            <mat-label>E-mail</mat-label>
+            <input matInput type="text" formControlName="email">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="text" formControlName="password">
+          </mat-form-field>
+        </div>
+        <div class="buttons">
+          <button mat-raised-button type="submit" [disabled]="loginForm.invalid">Sign in</button>
+          <button mat-raised-button class="button2" routerLink="/registration" type="button">Sign up</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

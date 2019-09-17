@@ -1,10 +1,15 @@
 .clients-list li{
-  padding: 10px 20px;
+  background-color: #ffffff;
+  /*padding: 10px 20px;*/
   border-radius: 5px;
   border: 1px solid #999;
   cursor: pointer;
   margin: 0;
   list-style-type: none;
+
+  padding: 0 10px;
+
+  width: 100%;
 }
 
 .clients-list li:not(:first-child){
@@ -14,4 +19,40 @@
 ul{
   margin: 0;
   padding: 0;
+}
+
+::ng-deep app-main{
+  width: 100%;
+}
+
+.client-name{
+  font-family: Arial;
+  color: #00a8ff;
+  font-weight: bold;
+}
+
+.client-email{
+  font-family: Arial;
+  color: #5f6a9e;
+  font-weight: 100;
+}
+
+.client-id{
+  font-family: Arial;
+  color: #8cc6fe;
+  font-weight: 100;
+}
+
+h1{
+  font-family: Arial;
+}
+
+.component{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content{
+  width: 90%;
 }
