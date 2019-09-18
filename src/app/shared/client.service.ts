@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { AngularFireAuth } from '@angular/fire/auth';
-import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Client } from './client';
@@ -48,16 +48,4 @@ export class ClientService {
 
     return this.client;
   }
-
-  newClient(client: Client) {
-    this.clientCollection.add(client);
-  }
-
-  /*createUser(user) {
-    return this.db.collection('users').add({
-      email: user.email,
-      name: user.name,
-      password: user.password
-    });
-  }*/
 }

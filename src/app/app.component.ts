@@ -1,12 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ClientService } from './shared/client.service';
-import {AuthService} from './shared/auth.service';
-
-/*export interface Todo {
-  completed: boolean;
-  title: string;
-  id?: number;
-}*/
+import { AuthService } from './shared/auth.service';
 
 @Component({
   selector: 'app-root',

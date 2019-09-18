@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../shared/client.service';
 
 import { Client } from '../shared/client';
-import { Observable } from 'rxjs';
-import {AuthService} from '../shared/auth.service';
+import { AuthService } from '../shared/auth.service';
 
 
 @Component({
@@ -26,5 +25,4 @@ export class MainComponent implements OnInit {
   logout() {
     this.authService.logout();
   }
-
 }

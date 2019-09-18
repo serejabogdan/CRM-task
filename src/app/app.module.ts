@@ -12,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClientComponent } from './client/client.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-// import {AngularFireStorageModule} from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MatButtonModule, MatInputModule } from '@angular/material';

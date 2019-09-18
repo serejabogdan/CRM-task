@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../shared/client.service';
-import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -9,9 +9,7 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 })
 
 export class RegistrationComponent implements OnInit {
-
   form: FormGroup;
-  // items = [];
 
   constructor(
     private authService: ClientService,
@@ -19,11 +17,6 @@ export class RegistrationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    /*this.authService.getClients().subscribe( data => {
-      this.items = data;
-    });*/
-
     this.form = this.fb.group({
         email: [
           '',
@@ -38,7 +31,6 @@ export class RegistrationComponent implements OnInit {
           Validators.minLength(6)
         ]
       });
-
     }
 
   submit() {
@@ -46,5 +38,4 @@ export class RegistrationComponent implements OnInit {
     const formData = this.form.value;
     console.log('Form data: ', formData);
   }
-
 }

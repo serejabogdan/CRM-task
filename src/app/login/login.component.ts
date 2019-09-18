@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  loggedIn: boolean = true;
+  loggedIn = true;
   message: string;
   loginForm: FormGroup;
 

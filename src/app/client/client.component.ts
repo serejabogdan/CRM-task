@@ -23,5 +23,4 @@ export class ClientComponent implements OnInit {
 
     this.appClientService.getClient(this.id).subscribe(client => this.client = client);
   }
-
 }
