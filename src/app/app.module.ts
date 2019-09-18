@@ -15,7 +15,6 @@ import { environment } from '../environments/environment';
 // import {AngularFireStorageModule} from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { NavComponent } from './nav/nav.component';
 import { MatButtonModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,8 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RegistrationComponent,
     LoginComponent,
     MainComponent,
-    ClientComponent,
-    NavComponent
+    ClientComponent
   ],
   imports: [
     BrowserModule,

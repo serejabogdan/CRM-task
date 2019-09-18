@@ -2,12 +2,6 @@
   <div class="content">
     <h1>Login</h1>
 
-    <div class="successful" style="color: green" *ngIf="loggedIn">
-      {{message}}
-    </div>
-    <div class="message" style="color: red" *ngIf="!loggedIn">
-      {{message}}
-    </div>
 
     <form [formGroup]="loginForm" (ngSubmit)="submit()">
       <div class="login">
@@ -29,5 +23,11 @@
         </div>
       </div>
     </form>
+  </div>
+</div>
+
+<div class="messages" *ngIf="!loggedIn">
+  <div class="error" style="color: red" *ngIf="!loggedIn">
+    {{message}}
   </div>
 </div>

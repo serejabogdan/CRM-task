@@ -1,0 +1,39 @@
+::ng-deep app-client{
+  width: 100%;
+}
+
+.content{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.client{
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #999;
+
+
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 80%;
+}
+
+.client-name{
+  font-family: Arial;
+  color: #00a8ff;
+  font-weight: bold;
+}
+
+.client-email{
+  font-family: Arial;
+  color: #5f6a9e;
+  font-weight: 100;
+}
+
+.client-id{
+  font-family: Arial;
+  color: #8cc6fe;
+  font-weight: 100;
+}

@@ -3,6 +3,7 @@ import { ClientService } from '../shared/client.service';
 
 import { Client } from '../shared/client';
 import { Observable } from 'rxjs';
+import {AuthService} from '../shared/auth.service';
 
 
 @Component({
@@ -13,10 +14,17 @@ import { Observable } from 'rxjs';
 export class MainComponent implements OnInit {
   clients: Client[];
 
-  constructor(private clientService: ClientService) { }
+  constructor(
+    private clientService: ClientService,
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
     this.clientService.getClients().subscribe(data => this.clients = data);
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }

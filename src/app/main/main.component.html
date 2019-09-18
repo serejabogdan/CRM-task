@@ -1,6 +1,11 @@
 <div class="component">
   <div class="content">
-    <h1>Clients</h1>
+    <div class="header">
+      <h1>Clients</h1>
+      <button class="button-exit" (click)="logout()">
+        <img class="button-exit-img" src="../../assets/images/exit.png" alt="">
+      </button>
+    </div>
 
     <div class="clients-list" *ngIf="clients; else loading">
       <ul>
@@ -13,6 +18,7 @@
     </div>
   </div>
 </div>
+
 <ng-template #loading>
   <span>Loading...</span>
 </ng-template>
