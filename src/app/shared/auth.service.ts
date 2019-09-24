@@ -11,6 +11,10 @@ export class AuthService {
     private router: Router
   ) { }
 
+  registration(email, password) {
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+  }
+
   login(email: string, password: string) {
     return new Promise( (resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(email, password)

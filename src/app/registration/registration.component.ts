@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../shared/client.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {AuthService} from '../shared/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -12,8 +13,9 @@ export class RegistrationComponent implements OnInit {
   form: FormGroup;
 
   constructor(
-    private authService: ClientService,
-    private fb: FormBuilder
+    private authService: AuthService,
+    private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -37,5 +39,8 @@ export class RegistrationComponent implements OnInit {
     console.log('Form: ', this.form);
     const formData = this.form.value;
     console.log('Form data: ', formData);
+
+    this.authService.registration(formData.email, formData.password);
+    this.router.navigate(['/main']);
   }
 }
